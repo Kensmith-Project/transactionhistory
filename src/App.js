@@ -1,19 +1,16 @@
-import logo from './logo.svg';
+
 import './App.css';
-import DailyTransaction from './components/DailyTransaction';
 
-import MainPage from './Screens/MainPage';
-//Initialize Apollo Client
-
-
-
-
+import MainPage from './Screens/MainPage'
+ 
+/*
+====== 
+Finally render the MainPage component on the App component
+======
+*/
 function App() {
   return   <MainPage/>
 
-   
-    
-  
-}
+   }
 
 export default App;
