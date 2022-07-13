@@ -1,0 +1,21 @@
+type Transaction {
+  # year: String!@examples(values:["2018", "2019","2020","2021","2022"])
+  date: String!@fake(type:pastDate)
+  id:ID!
+  name:String!@fake(type:fullName,options:{loremSize:sentence})
+  status:String! @examples(values:["Failed","Successful"])
+  Type:String!@examples(values:["Credit", "Debit"])
+  currency:String!@examples(values:["$"])
+  Amount: String!@fake(type:money)
+  }
+
+
+type Posts{
+  id:ID!
+  date: String!@fake(type:date)
+  transactions:[Transaction] @listLength(min:10,max:20)
+  
+}
+type Query{
+  posts:[Posts] @listLength(min:5,max:5)
+}
