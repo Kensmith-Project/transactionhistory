@@ -1,8 +1,16 @@
+IMPORTANT NOTE
+This Application runs locally on a faked-graphql local host. 
+   The faked graphQL API is not hosted and can only run locally.
+   Hence to run this apllication , first install graphQL faker globally at the root of  your system's terminal using the command  `yarn add globally graphql-faker `
+   After that run command `yarn graphql-faker --open ` to open it in a local graphql editor
+   Then down at your IDE you will see the last file `schema.faker.graphql` click on it and copy the whole text and paste it on your running graphql editor. Ensure you click the `SAVE` button on the bottom. This automatically generates the required faked-graphql API and can be fetched by the query that I have written on the code.
+   Before all these activity, ensure that npm is installed on your system and ensure that you run npm install on this project before npm start to see the application on the browser.
+
 
 APPLICATION TYPE
 
 
- This is a transaction page history application that displays all transaction data with their respective dates and time of the transaction.
+ This is a Transaction History Application that displays all transaction data grouped by their  dates and time of the transaction.
 
 
 APPLICATION STRUCTURE
@@ -13,7 +21,7 @@ It is a five group of data set with unique dates and time.
 
 DECISIONS
 
-I mocked a faked graphql Api using fake-graphql library. I installed it globally using command yarn add globally fake-graphql and opened it on a local host graphql editor.
+I mocked a faked graphql Api using fake-graphql library. I installed it globally using command `yarn add globally fake-graphql`  and opened it on a local host graphql editor.
 This enabled the graphql schema  to be saved locally on the root of this application.
 I created a grouped multidimensional array data structure of JSON  using grapql faker . I used this mutidensional array api structure to model the application wireframe design.
 This structure was in the same shape with the wireframe design. 
@@ -22,8 +30,8 @@ This structure was in the same shape with the wireframe design.
    
    I used useEffect react hook to fetch the faked data using the localhost api url as the data Url. 
    I used a promise to fetch the faked api data and converted it to JSON. 
-   I added header, method of Post and added body which I passed the all query. This enabled me fetch the data effectively. 
-   Note: There was no try and catch because the data is on local host.
+   I added header, method of `Post` and added body which I passed the all query. This enabled me fetch the data effectively. 
+   Note: There was no try and catch because the data is on local host, ie it is not running online.
    
 
    UI Implementation
@@ -40,11 +48,19 @@ This structure was in the same shape with the wireframe design.
 
 
    SHORTCUTS
-   use command yarn add globally graphql-faker to install graphql faker.
-   use yarn graphql-faker ..open to open on a local host editor.
+   
+   NOTE: This Application runs locally on a faked-graphql local host. 
+   The faked graphQL API is not hosted and can only run locally.
+   Hence to run this apllication , first install graphQL faker globally at the root of  your system's terminal using the command  `yarn add globally graphql-faker `
+   After that run command `yarn graphql-faker --open ` to open it in a local graphql editor
+   Then down at your IDE you will see the last file `schema.faker.graphql` click on it and copy the whole text and paste it on your running graphql editor. Ensure you click the `SAVE` button on the bottom. This automatically generates the required faked-graphql API and can be fetched by the query that I have written on the code.
+   Before all these activity, ensure that npm is installed on your system and ensure that you run npm install on this project before npm start to see the application on the browser.
 
-   use @fake to set the type of the data in the faker's graphql faker schema.
-   use @example to set an instance of the data you intend to use in the api
+   I used command yarn add globally graphql-faker to install graphql faker.
+   I used yarn graphql-faker ..open to open on a local host editor.
+
+   I used @fake to set the type of the data in the faker's graphql faker schema.
+   I used @example to set an instance of the data I intend to use in the api
 
 
 
